@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {"id": "NumPy", "group": 1, "popularity": 10},
+    {"id": "Python", "group": 1, "popularity": 40},
+    {"id": "Tensorflow", "group": 1, "popularity": 5},
+    {"id": "PyTorch", "group": 1, "popularity": 3},
+    {"id": "Flask", "group": 1, "popularity": 6},
+    {"id": "Data Science", "group": 3, "popularity": 30},
+    {"id": "R", "group": 2, "popularity": 15},
+    {"id": "R.stats", "group": 2, "popularity": 2},
+    {"id": "PyCharm", "group": 4, "popularity": 4}
+  ],
+  "links": [
+    {"source": "NumPy", "target": "Python", "value": 15},
+    {"source": "Tensorflow", "target": "Python", "value": 3},
+    {"source": "PyTorch", "target": "Python", "value": 3},
+    {"source": "PyTorch", "target": "NumPy", "value": 3},
+    {"source": "Flask", "target": "Python", "value": 5},
+    {"source": "Python", "target": "Data Science", "value": 4},
+    {"source": "R", "target": "Data Science", "value": 4},
+    {"source": "R.stats", "target": "R", "value": 8},
+    {"source": "PyCharm", "target": "Python", "value": 10}
+  ]
+}
