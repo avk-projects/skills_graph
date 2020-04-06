@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: center;
     width: auto;
-    padding: 5% 25% 5% 25%;
+    padding: 2% 25% 2% 25%;
     background-color: lightblue;
 }
 
@@ -31,9 +31,9 @@
 }
 
 .graph {    
-    /* display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; */
+    position: relative;
 
 }
