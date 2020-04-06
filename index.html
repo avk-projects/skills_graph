@@ -5,11 +5,11 @@
     <link rel="stylesheet" href="style.css" />
     <title>A visualisation of developer skills in demand</title>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script type="module" defer>
-        import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-        import define from "https://api.observablehq.com/@sergheimihailov/force-directed-graph.js?v=3";
-        const inspect = Inspector.into("#observablehq-bd834f2d");
-        (new Runtime).module(define, name => (name === "chart") && inspect());
+    <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import define from "https://api.observablehq.com/@sergheimihailov/force-directed-graph.js?v=3";
+    const inspect = Inspector.into("#observablehq-11d7b70a");
+    (new Runtime).module(define, name => (name === "chart") && inspect());
     </script>
 </head>
 
