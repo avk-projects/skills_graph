@@ -1,40 +1,48 @@
-
 <!DOCTYPE html>
+
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="Page-Enter" content="blendTrans(Duration=.01)" />
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <title>A visualisation of developer skills in demand</title>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
-<!-- <body> -->
-<!-- <div class="page"> -->
-<!-- <div class="landing"> -->
-    <!-- <h1>A visualisation of developer skills in demand</h1>
-    <p>We asked ourselves: 
-        what are the kinds of professionals that software companies are looking for? What are the skills in demand?
-        To answer it, Andrei scraped tens of thousands of job postings, 
-        connecting pairs of skills into clusters. 
-        <ul>
-            <li>The bigger the node, the more in demand the skill.</li>
-            <li>The wider the link, the closer the nodes, the more related are the two skills (seen together).</li>
-        </ul>
-    </p><p>
-        Below is an interactive synthesis of these findings, updated monthly.
-    </p> -->
-    <!-- <div class="buttons-div">
-        <a class="github-button" href="https://github.com/SergheiMihailov/dev_skills_graph" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star SergheiMihailov/dev_skills_graph on GitHub">Star</a>
-    <a class="github-button" href="https://github.com/SergheiMihailov/dev_skills_graph/issues" data-icon="octicon-issue-opened" data-size="large" data-show-count="true" aria-label="Issue SergheiMihailov/dev_skills_graph on GitHub">Issue</a>
-</div> -->
-<div class="graph" id="observablehq-bd834f2d" style="height:100vh;"></div>
-<!-- </div> -->
-<!-- <script async defer src="https://buttons.github.io/buttons.js"></script> -->
 
-<script type="module">
-    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-    import define from "https://api.observablehq.com/@sergheimihailov/force-directed-graph.js?v=3";
-    const inspect = Inspector.into("#observablehq-bd834f2d");
-    (new Runtime).module(define, name => (name === "chart") && inspect());
-    </script>
-<!-- Place this tag in your head or just before your close body tag. -->
-<!-- </body> -->
+<body>
+    <div class="page">
+        <div class="landing">
+            <h1>A visualisation of developer skills in demand</h1>
+            <p>We asked ourselves:
+                what are the kinds of professionals that software companies are looking for? What are the skills in
+                demand?
+                To answer it, Andrei scraped tens of thousands of job postings,
+                connecting pairs of skills into clusters.
+                <ul>
+                    <li>The bigger the node, the more in demand the skill.</li>
+                    <li>The wider the link, the closer the nodes, the more related are the two skills (seen together).
+                    </li>
+                </ul>
+            </p>
+            <p>
+                Below is an interactive synthesis of these findings, updated monthly.
+            </p>
+            <div class="buttons-div">
+                <a class="github-button" href="https://github.com/SergheiMihailov/dev_skills_graph"
+                    data-icon="octicon-star" data-size="large" data-show-count="true"
+                    aria-label="Star SergheiMihailov/dev_skills_graph on GitHub">Star</a>
+                <a class="github-button" href="https://github.com/SergheiMihailov/dev_skills_graph/issues"
+                    data-icon="octicon-issue-opened" data-size="large" data-show-count="true"
+                    aria-label="Issue SergheiMihailov/dev_skills_graph on GitHub">Issue</a>
+            </div>
+        </div>
+        <div class="graph" id="observablehq-bd834f2d" style="height:100vh;"></div>
+    </div>
+
+        <script type="module">
+            import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+            import define from "https://api.observablehq.com/@sergheimihailov/force-directed-graph.js?v=3";
+            const inspect = Inspector.into("#observablehq-bd834f2d");
+            (new Runtime).module(define, name => (name === "chart") && inspect());
+        </script>
+</body>
+
 </html>
