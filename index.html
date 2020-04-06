@@ -5,6 +5,12 @@
     <link rel="stylesheet" href="style.css" />
     <title>A visualisation of developer skills in demand</title>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script type="module" defer>
+        import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+        import define from "https://api.observablehq.com/@sergheimihailov/force-directed-graph.js?v=3";
+        const inspect = Inspector.into("#observablehq-bd834f2d");
+        (new Runtime).module(define, name => (name === "chart") && inspect());
+    </script>
 </head>
 
 <body>
@@ -16,14 +22,13 @@
                 demand?
                 To answer it, Andrei scraped tens of thousands of job postings,
                 connecting pairs of skills into clusters.
+                Below is an interactive synthesis of these findings, updated monthly.
+
                 <ul>
                     <li>The bigger the node, the more in demand the skill.</li>
                     <li>The wider the link, the closer the nodes, the more related are the two skills (seen together).
                     </li>
                 </ul>
-            </p>
-            <p>
-                Below is an interactive synthesis of these findings, updated monthly.
             </p>
             <div class="buttons-div">
                 <a class="github-button" href="https://github.com/SergheiMihailov/dev_skills_graph"
@@ -34,15 +39,10 @@
                     aria-label="Issue SergheiMihailov/dev_skills_graph on GitHub">Issue</a>
             </div>
         </div>
-        <div class="graph" id="observablehq-bd834f2d" style="height:100vh;"></div>
+        <div class="graph" id="observablehq-bd834f2d"></div>
     </div>
 
-        <script type="module">
-            import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-            import define from "https://api.observablehq.com/@sergheimihailov/force-directed-graph.js?v=3";
-            const inspect = Inspector.into("#observablehq-bd834f2d");
-            (new Runtime).module(define, name => (name === "chart") && inspect());
-        </script>
+        
 </body>
 
 </html>
