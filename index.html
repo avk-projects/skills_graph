@@ -30,12 +30,13 @@
 <div class="graph" id="observablehq-bd834f2d" style="height:100vh;"></div>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
+
 <script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/@sergheimihailov/force-directed-graph.js?v=3";
-const inspect = Inspector.into("#observablehq-bd834f2d");
-(new Runtime).module(define, name => (name === "chart") && inspect());
-</script>
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import define from "https://api.observablehq.com/@sergheimihailov/force-directed-graph.js?v=3";
+    const inspect = Inspector.into("#observablehq-bd834f2d");
+    (new Runtime).module(define, name => (name === "chart") && inspect());
+    </script>
 <!-- Place this tag in your head or just before your close body tag. -->
 </body>
 </html>
